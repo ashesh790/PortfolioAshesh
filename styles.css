@@ -8,8 +8,8 @@
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
-    color: #e0e0e0;
-    background: #0a0e27;
+    color: #cccccc;
+    background: #1e1e1e;
     overflow-x: hidden;
 }
 
@@ -17,13 +17,14 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Navigation */
+/* Navigation - VS Code Style */
 .navbar {
     padding: 1rem 0;
     transition: all 0.3s ease;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
-    background: rgba(10, 14, 39, 0.95) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    background: #252526 !important;
     backdrop-filter: blur(10px);
+    border-bottom: 1px solid #3e3e42;
 }
 
 .navbar-brand {
@@ -31,32 +32,42 @@ html {
     font-weight: 600;
     letter-spacing: 1px;
     font-family: 'JetBrains Mono', monospace;
-    color: #00ff88 !important;
+    color: #007acc !important;
 }
 
 .navbar-nav .nav-link {
     margin: 0 0.5rem;
     font-weight: 500;
     transition: color 0.3s ease;
-    color: #e0e0e0 !important;
+    color: #cccccc !important;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
 }
 
 .navbar-nav .nav-link:hover {
-    color: #00ff88 !important;
+    color: #ffffff !important;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
 }
 
 .navbar-nav .nav-link.active {
-    color: #00ff88 !important;
+    color: #007acc !important;
+    background: rgba(0, 122, 204, 0.1);
+    border-radius: 3px;
 }
 
-/* Hero Section */
+/* Hero Section - VS Code Editor Style */
 .hero-section {
-    background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #0a0e27 100%);
-    color: #e0e0e0;
-    padding-top: 80px;
+    background: #1e1e1e;
+    color: #cccccc;
+    padding-top: 120px;
+    padding-bottom: 150px;
     position: relative;
     overflow: hidden;
     min-height: 100vh;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #3e3e42;
 }
 
 .code-background {
@@ -66,10 +77,10 @@ html {
     right: 0;
     bottom: 0;
     background-image: 
-        linear-gradient(rgba(0, 255, 136, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 255, 136, 0.03) 1px, transparent 1px);
-    background-size: 50px 50px;
-    opacity: 0.5;
+        linear-gradient(rgba(133, 133, 133, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(133, 133, 133, 0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.3;
     animation: gridMove 20s linear infinite;
 }
 
@@ -81,25 +92,27 @@ html {
 .hero-content {
     position: relative;
     z-index: 1;
+    padding: 2rem 0;
 }
 
-/* Terminal Window */
+/* Terminal Window - VS Code Terminal Style */
 .terminal-window {
     background: #1e1e1e;
-    border-radius: 10px;
-    box-shadow: 0 10px 40px rgba(0, 255, 136, 0.2), 0 0 0 1px rgba(0, 255, 136, 0.1);
+    border-radius: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    border: 1px solid #3e3e42;
     overflow: hidden;
-    margin: 2rem auto;
+    margin: 1rem auto 2rem;
     max-width: 800px;
     font-family: 'JetBrains Mono', monospace;
 }
 
 .terminal-header {
     background: #2d2d2d;
-    padding: 0.75rem 1rem;
+    padding: 0.5rem 1rem;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid #3d3d3d;
+    border-bottom: 1px solid #3e3e42;
 }
 
 .terminal-buttons {
@@ -147,13 +160,13 @@ html {
 }
 
 .terminal-prompt {
-    color: #00ff88;
+    color: #4ec9b0;
     margin-right: 0.5rem;
     font-weight: 600;
 }
 
 .terminal-command {
-    color: #e0e0e0;
+    color: #dcdcaa;
     font-family: 'JetBrains Mono', monospace;
 }
 
@@ -163,27 +176,27 @@ html {
 }
 
 .terminal-name {
-    color: #00d9ff;
+    color: #4ec9b0;
     font-size: 1.5rem;
     font-weight: 700;
     font-family: 'Poppins', sans-serif;
 }
 
 .terminal-role {
-    color: #ff6b9d;
+    color: #9cdcfe;
     font-size: 1.2rem;
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
 }
 
 .tech-stack {
-    color: #ffd93d;
+    color: #ce9178;
     font-size: 1rem;
     font-family: 'JetBrains Mono', monospace;
 }
 
 .terminal-cursor {
-    color: #00ff88;
+    color: #007acc;
     animation: blink 1s infinite;
     font-weight: 600;
 }
@@ -194,59 +207,75 @@ html {
 }
 
 .btn-tech {
-    background: linear-gradient(135deg, #00ff88 0%, #00d9ff 100%);
+    background: #007acc;
     border: none;
-    color: #0a0e27;
+    color: #ffffff;
     font-weight: 600;
     padding: 0.75rem 2rem;
-    border-radius: 5px;
+    border-radius: 2px;
     transition: all 0.3s ease;
-    box-shadow: 0 5px 20px rgba(0, 255, 136, 0.3);
+    box-shadow: 0 2px 8px rgba(0, 122, 204, 0.3);
+    font-family: 'JetBrains Mono', monospace;
 }
 
 .btn-tech:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 30px rgba(0, 255, 136, 0.5);
-    color: #0a0e27;
+    background: #005a9e;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 122, 204, 0.4);
+    color: #ffffff;
+}
+
+.hero-buttons {
+    margin: 2rem 0 3rem 0;
+}
+
+.hero-content .lead {
+    margin: 2rem 0 !important;
+    padding: 0 1rem;
 }
 
 .social-links {
     display: flex;
     gap: 1rem;
     justify-content: center;
+    margin-top: 2.5rem !important;
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
 }
 
 .social-icon {
     width: 45px;
     height: 45px;
-    background: rgba(0, 255, 136, 0.1);
-    border: 2px solid rgba(0, 255, 136, 0.3);
-    border-radius: 50%;
+    background: #2d2d2d;
+    border: 1px solid #3e3e42;
+    border-radius: 3px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #00ff88;
+    color: #cccccc;
     text-decoration: none;
     transition: all 0.3s ease;
 }
 
 .social-icon:hover {
-    background: rgba(0, 255, 136, 0.2);
-    transform: translateY(-5px);
-    color: #00ff88;
-    box-shadow: 0 5px 20px rgba(0, 255, 136, 0.4);
+    background: #3e3e42;
+    border-color: #007acc;
+    transform: translateY(-2px);
+    color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 122, 204, 0.3);
 }
 
 .scroll-indicator {
     position: absolute;
-    bottom: 30px;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     animation: bounce 2s infinite;
+    z-index: 10;
 }
 
 .scroll-indicator a {
-    color: #00ff88;
+    color: #007acc;
     font-size: 2rem;
     text-decoration: none;
 }
@@ -267,49 +296,60 @@ html {
 section {
     padding: 80px 0;
     position: relative;
+    scroll-margin-top: 100px;
+}
+
+section[id] {
+    scroll-margin-top: 100px;
 }
 
 .section-title {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    color: #00ff88;
+    color: #ffffff;
     font-family: 'JetBrains Mono', monospace;
 }
 
 .title-underline {
     width: 80px;
-    height: 4px;
-    background: linear-gradient(135deg, #00ff88 0%, #00d9ff 100%);
+    height: 2px;
+    background: #007acc;
     margin: 0 auto 2rem;
-    border-radius: 2px;
-    box-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+    border-radius: 0;
+    box-shadow: none;
 }
 
 /* About Section */
+#about {
+    padding-top: 150px !important;
+    scroll-margin-top: 100px;
+    margin-top: 0;
+}
+
 .about-content {
     padding: 2rem 0;
 }
 
-/* Code Snippet */
+/* Code Snippet - VS Code Editor Style */
 .code-snippet {
     background: #1e1e1e;
-    border-radius: 10px;
+    border-radius: 0;
     overflow: hidden;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(0, 255, 136, 0.2);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    border: 1px solid #3e3e42;
 }
 
 .code-header {
-    background: #2d2d2d;
+    background: #252526;
     padding: 0.75rem 1rem;
-    border-bottom: 1px solid #3d3d3d;
+    border-bottom: 1px solid #3e3e42;
     display: flex;
     align-items: center;
 }
 
 .code-lang {
-    color: #888;
+    color: #858585;
     font-size: 0.85rem;
     font-family: 'JetBrains Mono', monospace;
 }
@@ -356,28 +396,30 @@ section {
     font-style: italic;
 }
 
-/* Skills Section */
+/* Skills Section - Terminal Style */
 #skills {
-    background: #0f1322;
+    background: #1e1e1e;
     position: relative;
+    border-top: 1px solid #3e3e42;
+    border-bottom: 1px solid #3e3e42;
 }
 
-#skills::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: 
-        linear-gradient(rgba(0, 255, 136, 0.02) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 255, 136, 0.02) 1px, transparent 1px);
-    background-size: 30px 30px;
-    opacity: 0.3;
+#skills .terminal-window {
+    margin-bottom: 0;
+    height: 100%;
 }
 
-.skill-item {
+#skills .terminal-body {
+    min-height: auto;
+    padding: 1.5rem;
+}
+
+#skills .skill-item {
     margin-bottom: 1.5rem;
+}
+
+#skills .skill-item:last-child {
+    margin-bottom: 0;
 }
 
 .skill-header {
@@ -385,97 +427,116 @@ section {
     justify-content: space-between;
     margin-bottom: 0.5rem;
     font-weight: 600;
-    color: #e0e0e0;
+    color: #cccccc;
     font-family: 'JetBrains Mono', monospace;
 }
 
+.skill-name {
+    color: #4ec9b0;
+}
+
+.skill-percent {
+    color: #ce9178;
+}
+
 .progress {
-    height: 12px;
-    border-radius: 10px;
-    background-color: #1e1e1e;
+    height: 6px;
+    border-radius: 0;
+    background-color: #2d2d2d;
     overflow: hidden;
-    border: 1px solid rgba(0, 255, 136, 0.2);
+    border: 1px solid #3e3e42;
+    margin-top: 0.25rem;
 }
 
 .progress-bar {
-    background: linear-gradient(90deg, #00ff88 0%, #00d9ff 100%);
+    background: #007acc;
     height: 100%;
-    border-radius: 10px;
+    border-radius: 0;
     transition: width 1s ease;
-    box-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+    box-shadow: none;
 }
 
 .tech-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
+    gap: 0.75rem;
+    justify-content: flex-start;
+    margin-top: 0.5rem;
 }
 
 .tech-tag {
-    padding: 0.5rem 1.5rem;
-    background: rgba(0, 255, 136, 0.1);
-    color: #00ff88;
-    border: 1px solid rgba(0, 255, 136, 0.3);
-    border-radius: 5px;
+    padding: 0.4rem 1rem;
+    background: transparent;
+    color: #9cdcfe;
+    border: 1px solid #3e3e42;
+    border-radius: 0;
     font-weight: 500;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-family: 'JetBrains Mono', monospace;
     transition: all 0.3s ease;
+    display: inline-block;
 }
 
 .tech-tag:hover {
-    transform: translateY(-3px);
-    background: rgba(0, 255, 136, 0.2);
-    box-shadow: 0 5px 20px rgba(0, 255, 136, 0.4);
+    transform: translateY(-1px);
+    background: #2d2d2d;
+    border-color: #007acc;
+    color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 122, 204, 0.2);
 }
 
-/* Projects Section */
+#skills .terminal-output .tech-tags {
+    padding-left: 0;
+}
+
+/* Projects Section - VS Code Panel Style */
 #projects {
-    background: #0a0e27;
+    background: #1e1e1e;
+    border-top: 1px solid #3e3e42;
+    border-bottom: 1px solid #3e3e42;
 }
 
 .project-card {
-    background: #1e1e1e;
-    border-radius: 10px;
+    background: #252526;
+    border-radius: 0;
     overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
     height: 100%;
     display: flex;
     flex-direction: column;
-    border: 1px solid rgba(0, 255, 136, 0.1);
+    border: 1px solid #3e3e42;
 }
 
 .project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 40px rgba(0, 255, 136, 0.3);
-    border-color: rgba(0, 255, 136, 0.5);
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 122, 204, 0.2);
+    border-color: #007acc;
 }
 
 .project-header-tech {
     height: 60px;
-    background: linear-gradient(135deg, #1a1f3a 0%, #2d2d2d 100%);
+    background: #2d2d2d;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 1.5rem;
-    border-bottom: 1px solid rgba(0, 255, 136, 0.2);
+    border-bottom: 1px solid #3e3e42;
 }
 
 .project-icon {
-    color: #00ff88;
+    color: #007acc;
     font-size: 1.5rem;
 }
 
 .project-tech-badge {
-    background: rgba(0, 255, 136, 0.2);
-    color: #00ff88;
+    background: #1e1e1e;
+    color: #4ec9b0;
     padding: 0.25rem 0.75rem;
-    border-radius: 5px;
+    border-radius: 2px;
     font-size: 0.85rem;
     font-family: 'JetBrains Mono', monospace;
-    border: 1px solid rgba(0, 255, 136, 0.3);
+    border: 1px solid #3e3e42;
 }
 
 .project-content {
@@ -488,14 +549,58 @@ section {
 .project-content h4 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: #00ff88;
+    color: #ffffff;
     font-family: 'JetBrains Mono', monospace;
 }
 
 .project-content p {
-    color: #b0b0b0;
+    color: #cccccc;
     margin-bottom: 1rem;
     flex-grow: 1;
+}
+
+.project-date {
+    color: #4ec9b0 !important;
+    font-size: 0.9rem;
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 0.75rem !important;
+    display: flex;
+    align-items: center;
+}
+
+.project-features {
+    list-style: none;
+    padding-left: 0;
+    margin: 1rem 0;
+}
+
+.project-features li {
+    color: #cccccc;
+    padding: 0.4rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.project-features li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: #007acc;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.project-status {
+    font-size: 0.85rem;
+    color: #dcdcaa;
+    font-family: 'JetBrains Mono', monospace;
+    margin-left: auto;
+    padding: 0.25rem 0.75rem;
+    background: #2d2d2d;
+    border: 1px solid #3e3e42;
+    border-radius: 2px;
 }
 
 .project-tech {
@@ -506,15 +611,17 @@ section {
 }
 
 .project-tech .badge {
-    background: rgba(0, 217, 255, 0.2);
-    color: #00d9ff;
-    border: 1px solid rgba(0, 217, 255, 0.3);
+    background: #2d2d2d;
+    color: #4ec9b0;
+    border: 1px solid #3e3e42;
     font-family: 'JetBrains Mono', monospace;
 }
 
 .project-links {
     display: flex;
     gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .project-links .btn {
@@ -522,31 +629,34 @@ section {
 }
 
 .btn-outline-primary {
-    border-color: #00ff88;
-    color: #00ff88;
+    border-color: #007acc;
+    color: #007acc;
+    background: transparent;
 }
 
 .btn-outline-primary:hover {
-    background: #00ff88;
-    border-color: #00ff88;
-    color: #0a0e27;
+    background: #007acc;
+    border-color: #007acc;
+    color: #ffffff;
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #00ff88 0%, #00d9ff 100%);
+    background: #007acc;
     border: none;
-    color: #0a0e27;
+    color: #ffffff;
 }
 
 .btn-primary:hover {
-    background: linear-gradient(135deg, #00d9ff 0%, #00ff88 100%);
-    color: #0a0e27;
+    background: #005a9e;
+    color: #ffffff;
 }
 
-/* Experience Section */
+/* Experience Section - VS Code Style */
 #experience {
-    background: #0f1322;
+    background: #252526;
     position: relative;
+    border-top: 1px solid #3e3e42;
+    border-bottom: 1px solid #3e3e42;
 }
 
 .timeline {
@@ -560,9 +670,9 @@ section {
     left: 30px;
     top: 0;
     bottom: 0;
-    width: 3px;
-    background: linear-gradient(180deg, #00ff88 0%, #00d9ff 100%);
-    box-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+    width: 2px;
+    background: #007acc;
+    box-shadow: none;
 }
 
 .timeline-item {
@@ -575,37 +685,37 @@ section {
     position: absolute;
     left: 20px;
     top: 0;
-    width: 20px;
-    height: 20px;
-    background: #00ff88;
+    width: 12px;
+    height: 12px;
+    background: #007acc;
     border-radius: 50%;
-    border: 4px solid #0f1322;
-    box-shadow: 0 0 0 4px #00ff88, 0 0 20px rgba(0, 255, 136, 0.5);
+    border: 2px solid #252526;
+    box-shadow: 0 0 0 2px #007acc;
 }
 
 .timeline-content {
     background: #1e1e1e;
     padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(0, 255, 136, 0.2);
+    border-radius: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    border: 1px solid #3e3e42;
 }
 
 .timeline-content h4 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
-    color: #00ff88;
+    color: #ffffff;
     font-family: 'JetBrains Mono', monospace;
 }
 
 .timeline-content h5 {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
-    color: #00d9ff;
+    color: #4ec9b0;
 }
 
 .timeline-content .text-muted {
-    color: #888 !important;
+    color: #858585 !important;
     font-family: 'JetBrains Mono', monospace;
 }
 
@@ -619,49 +729,51 @@ section {
     padding: 0.5rem 0;
     padding-left: 1.5rem;
     position: relative;
-    color: #b0b0b0;
+    color: #cccccc;
 }
 
 .timeline-content ul li::before {
     content: '▸';
     position: absolute;
     left: 0;
-    color: #00ff88;
+    color: #007acc;
     font-weight: bold;
 }
 
-/* Contact Section */
+/* Contact Section - VS Code Style */
 #contact {
-    background: #0a0e27;
+    background: #1e1e1e;
+    border-top: 1px solid #3e3e42;
 }
 
 .contact-form {
-    background: #1e1e1e;
+    background: #252526;
     padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(0, 255, 136, 0.2);
+    border-radius: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    border: 1px solid #3e3e42;
 }
 
 .contact-form .form-control {
-    background: #2d2d2d;
-    border: 1px solid rgba(0, 255, 136, 0.2);
-    border-radius: 5px;
+    background: #1e1e1e;
+    border: 1px solid #3e3e42;
+    border-radius: 0;
     padding: 0.75rem 1rem;
-    color: #e0e0e0;
+    color: #cccccc;
     transition: all 0.3s ease;
     font-family: 'JetBrains Mono', monospace;
 }
 
 .contact-form .form-control:focus {
-    border-color: #00ff88;
-    box-shadow: 0 0 0 0.2rem rgba(0, 255, 136, 0.25);
-    background: #2d2d2d;
-    color: #e0e0e0;
+    border-color: #007acc;
+    box-shadow: 0 0 0 1px #007acc;
+    background: #1e1e1e;
+    color: #cccccc;
+    outline: none;
 }
 
 .contact-form .form-control::placeholder {
-    color: #666;
+    color: #858585;
 }
 
 .contact-info {
@@ -670,32 +782,38 @@ section {
 
 .contact-info i {
     margin-bottom: 1rem;
-    color: #00ff88;
+    color: #007acc;
 }
 
 .contact-info h5 {
     margin-bottom: 0.5rem;
-    color: #00ff88;
+    color: #ffffff;
     font-family: 'JetBrains Mono', monospace;
 }
 
 .contact-info p {
-    color: #b0b0b0;
+    color: #cccccc;
     margin: 0;
 }
 
 .text-primary {
-    color: #00ff88 !important;
+    color: #007acc !important;
 }
 
 .lead {
-    color: #b0b0b0;
+    color: #cccccc;
 }
 
-/* Footer */
+/* Footer - VS Code Status Bar Style */
 footer {
-    background: #0a0e27 !important;
-    border-top: 1px solid rgba(0, 255, 136, 0.2);
+    background: #007acc !important;
+    border-top: none;
+    color: #ffffff;
+}
+
+footer p {
+    color: #ffffff;
+    margin: 0;
 }
 
 .social-links-footer {
@@ -708,22 +826,22 @@ footer {
 .social-icon-footer {
     width: 40px;
     height: 40px;
-    background: rgba(0, 255, 136, 0.1);
-    border: 1px solid rgba(0, 255, 136, 0.3);
-    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #00ff88;
+    color: #ffffff;
     text-decoration: none;
     transition: all 0.3s ease;
 }
 
 .social-icon-footer:hover {
-    background: rgba(0, 255, 136, 0.2);
-    transform: translateY(-5px);
-    color: #00ff88;
-    box-shadow: 0 5px 20px rgba(0, 255, 136, 0.4);
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Responsive Design */

@@ -4,9 +4,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
-            const offsetTop = target.offsetTop - 70;
+            const navbarHeight = document.querySelector('.navbar').offsetHeight;
+            const offsetTop = target.offsetTop - navbarHeight - 20;
             window.scrollTo({
-                top: offsetTop,
+                top: Math.max(0, offsetTop),
                 behavior: 'smooth'
             });
         }
